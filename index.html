@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./files/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="shortcut icon" href="./files/web icon.ico">
+    <title>Fibo</title>
+    <script src="./js/main.js" defer></script>
+
+</head>
+
+<body>
+
+    <nav>
+        <a href="https://fibotax.com/">
+            <img id="logo" src="./files/fibo.png">
+        </a>
+    </nav>
+    <div id="burger"><i onclick="showElement()" class="fa-solid fa-bars"></i></div>
+    <div id="bot"> <img src="./files/logo.png"></div>
+
+    <div id="after-img">
+        <div>
+            <div id="hello">
+                <h1>שלום מנחם חי!</h1>
+                <h3>יש לך הודעה חדשה מאיתנו</h3>
+            </div>
+            <div onclick="showSpinner()" id="toopen"><span>להצגת ההודעה</span>
+                <div id="spinner" class="hidden">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div id="gray-background" onclick="unshowElement()" class="hide"></div>
+        <div id="navside" class="hide">
+            <ul>
+                <li onclick="openA()"><span>הרשמה</span></li>
+                <li onclick="openB()"><span><b>פיבו</b></span></li>
+                <li onclick="openC()"><span>מחירון</span></li>
+                <li onclick="openD()"><span>שאלות ותשובות</span></li>
+                <li onclick="openE()"><span>עלינו</span></li>
+                <li onclick="openF()"><span>מגזין</span></li>
+                <li onclick="openG()"><span>צרו קשר</span></li>
+            </ul>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>
