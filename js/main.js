@@ -44,5 +44,37 @@ function showSpinner() {
     setTimeout(() => {
         button.style.display = "none"
         spinner.classList.add("hidden");
-    }, 4000);
+        showMassage();
+    }, 1000);
+}
+
+function showMassage() {
+    const afterImg = document.querySelector("#after-img div");
+    toopen.innerHTML = "";
+    const massage = `skvjhsdkjhksjhdvkjshdv
+skvjhsdkjhksjhdvkjshdvsdkjhksjhdv
+skvjhsdkjhksjhdvkjshdvsdkjhksjhdv
+skvjhsdkjhksjhdvkjshdvsdkjhksjhdv
+skvjhsdkjhksjhdvkjshdvsdkjhksjhdv
+skvjhsdkjhksjhdvkjshdvsdkjhksjhdv
+skvjhsdkjhksjhdvkjshdvsdkjhksjhdv
+skvjhsdkjhksjhdvkjshdvsdkjhksjhdv
+skvjhsdkjhksjhdvkjshdvsdkjhksjhdv
+skvjhsdkjhksjhdvkjshdvsdkjhksjhdv
+skvjhsdkjhksjhdvkjshdvsdkjhksjhdv
+skvjhsdkjhksjhdvkjshdvsdkjhksjhdv
+skvjhsdkjhksjhdvkjshdvsdkjhksjhdv
+skvjhsdkjhksjhdvkjshdvsdkjhksjhdv
+skvjhsdkjhksjhdvkjshdvsdkjhksjhdv
+skvjhsdkjhksjhdvkjshdv
+skvjhsdkjhksjhdvkjshdv
+skvjhsdkjhksjhdvkjshdv
+skvjhsdkjhksjhdvkjshdv`;
+
+    const pepper = document.createElement("div");
+    pepper.id = "pepper";
+    const p = document.createElement("p");
+    p.innerText = massage;
+    pepper.append(p);
+    afterImg.append(pepper);
 }

@@ -147,23 +147,45 @@ li:nth-of-type(2) b {
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
 
 .spinner {
-  border: 2px solid rgba(255, 255, 255, 0.354);
-  border-top: 2px solid white;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  animation: spin 1s linear infinite;
+    border: 2px solid rgba(255, 255, 255, 0.354);
+    border-top: 2px solid white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#pepper {
+    display: flex;
+    position: absolute;
+    top: 35vh;
+    right: 10vw;
+    width: 80vw;
+    height: 30vh;
+    overflow: scroll;
+    border: rgb(213, 213, 213) 1px solid;
+
+    background-color: #e7e7e7;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+}
+
+#pepper p {
+    text-align: center;
+    width: 100%;
 }
