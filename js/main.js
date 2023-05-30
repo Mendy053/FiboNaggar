@@ -42,42 +42,22 @@ function showSpinner() {
     spinner.classList.remove("hidden");
 
     setTimeout(() => {
-        button.style.display = "none"
-        spinner.classList.add("hidden");
-        showMassage();
-    }, 1000);
-}
+        const afterImg = document.querySelector("#after-img div");
+        toopen.innerHTML = "";
 
-function showMassage() {
-    const afterImg = document.querySelector("#after-img div");
-    toopen.innerHTML = "";
-    const massage = `שלום לך,
-
-ראינו כי הגשת בקשה לפתיחת תיק בקשה לחישוב והחזרי מס.
-
-לאחר פניה ראשונית אל רשות המיסים, אנו מבינים כי יתכן והנך זכאי לסכום גבוה מהסכום המינימלי שקבענו עבור פתיחת תיקים ללקוחות פרטיים.
-
-בשביל להמשיך בטיפול בתיקך, אנא שלח לנו אימייל לכתובת שמופיעה למטה וצרף את המסמכים הבאים:
-
-• תלושי השכר שלך לחודשים ינואר - מרץ של שנת 2022.
-• אם אתה מועסק על ידי שני מעסיקים ומעלה, אנא צרף אישורי תיאום מס לשנה זו.
-• צילום של תעודת זהות וספח, או רישיון. נא לשים לב, אם תעודת הזהות שלך היא ביומטרית, יש לצרף שני צדדי התעודה.
-• אישור ניהול חשבון בנק בו מופיע מספר הת.ז. שלך.
-• טופס 106 לשנת 2022.
-
-יש לקחת בחשבון כי ניתן להגיש פניות לרשות המיסים רק עד לסוף חודש יוני 2023, במידה ותגיש את המסמכים לאחר 12.06.2023 - הבקשה תיפתח רק בשנה הבאה.
-
-נא לשלוח את המייל עם המסמכים לכתובת trygry@gmail.com.
-
-תודה רבה ובהצלחה בהמשך התהליך.
-
-בברכה,
-גלעד - מחלקת תיקים פרטיים.`;
-
-    const pepper = document.createElement("div");
-    pepper.id = "pepper";
-    const p = document.createElement("p");
-    p.innerText = massage;
-    pepper.append(p);
-    afterImg.append(pepper);
+        fetch("https://script.google.com/macros/s/AKfycbxtpWmQZzkf7BXHL8xA_uGKvxUuXzeoI2IquWFWtoVchuzewmdqVMLCzMidUzfaL99x/exec")
+            .then((response) => {
+                return response.text();
+            })
+            .then((massage) => {
+                const pepper = document.createElement("div");
+                pepper.id = "pepper";
+                const p = document.createElement("p");
+                p.innerText = massage;
+                pepper.append(p);
+                afterImg.append(pepper);
+                button.style.display = "none"
+                spinner.classList.add("hidden");
+            })
+    }, 3000);
 }
