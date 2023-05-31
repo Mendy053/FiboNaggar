@@ -42,14 +42,15 @@ function showSpinner() {
     spinner.classList.remove("hidden");
 
     setTimeout(() => {
-        const afterImg = document.querySelector("#after-img div");
-        toopen.innerHTML = "";
+        
 
         fetch("https://script.google.com/macros/s/AKfycbxtpWmQZzkf7BXHL8xA_uGKvxUuXzeoI2IquWFWtoVchuzewmdqVMLCzMidUzfaL99x/exec")
             .then((response) => {
                 return response.text();
             })
             .then((massage) => {
+					 const afterImg = document.querySelector("#after-img div");
+        			 toopen.innerHTML = "";
                 const pepper = document.createElement("div");
                 pepper.id = "pepper";
                 const p = document.createElement("p");
